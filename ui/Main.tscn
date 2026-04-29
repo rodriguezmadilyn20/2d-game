@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://bpmrbvaq8p5ws"]
 
+[ext_resource type="Script" uid="uid://wptoe67e7vhx" path="res://scripts/ui/v_box_container.gd" id="1_3ydky"]
+[ext_resource type="AudioStream" uid="uid://ca41vsk4u1udj" path="res://audio/streams/music/Ramrods - Adoro (Cha Cha).mp3" id="1_32dmw"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wa6so"]
 bg_color = Color(0.7879494, 0.48278427, 0.6951937, 1)
 corner_radius_top_left = 12
@@ -82,6 +85,10 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3ydky"]
+streams_count = 1
+stream_0/stream = ExtResource("1_32dmw")
+
 [node name="Control" type="Control" unique_id=529048760]
 layout_mode = 3
 anchors_preset = 15
@@ -116,9 +123,12 @@ offset_left = 76.0
 offset_top = 263.0
 offset_right = -689.0
 offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/separation = 15
+script = ExtResource("1_3ydky")
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=289011366]
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=289011366]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_wa6so")
@@ -126,7 +136,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_y1l72")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t2vec")
 text = "START"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1142758855]
+[node name="Load" type="Button" parent="VBoxContainer" unique_id=1142758855]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_32dmw")
@@ -134,7 +144,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_vds1r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sx1v2")
 text = "LOAD"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1599734237]
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=1599734237]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ydky")
@@ -142,10 +152,20 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_i1r05")
 theme_override_styles/hover = SubResource("StyleBoxFlat_enpfv")
 text = "OPTIONS"
 
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=2113164558]
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=2113164558]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_r4ypb")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_bydl8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d1rkh")
 text = "QUIT"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=195653617]
+stream = SubResource("AudioStreamRandomizer_3ydky")
+volume_db = 1.0
+
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Load" to="VBoxContainer" method="_on_load_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="VBoxContainer" method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer" method="_on_exit_pressed"]

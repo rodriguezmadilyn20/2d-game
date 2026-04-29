@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dc2m5xtluyuf5"]
+
+[node name="Pause" type="Control" unique_id=478105143]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=549489903]
+layout_mode = 0
+offset_left = 529.0
+offset_top = 44.0
+offset_right = 754.0
+offset_bottom = 132.0
+theme_override_font_sizes/font_size = 64
+text = "Paused"
+
+[node name="ResumeButn" type="Button" parent="." unique_id=1200283992]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 207.0
+offset_right = 483.0
+offset_bottom = 303.0
+theme_override_font_sizes/font_size = 40
+text = "RESUME"
+
+[node name="ResumeButn2" type="Button" parent="." unique_id=1159998873]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 327.0
+offset_right = 483.0
+offset_bottom = 423.0
+theme_override_font_sizes/font_size = 40
+text = "OPTIONS"
+
+[node name="ResumeButn3" type="Button" parent="." unique_id=639759065]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 454.0
+offset_right = 483.0
+offset_bottom = 550.0
+theme_override_font_sizes/font_size = 40
+text = "QUIT"
