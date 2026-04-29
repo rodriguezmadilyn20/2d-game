@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dc2m5xtluyuf5"]
 
+[ext_resource type="Script" uid="uid://ctl5u6rd6qder" path="res://scripts/ui/pauseScreen.gd" id="1_6r6nn"]
+
 [node name="Pause" type="Control" unique_id=478105143]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6r6nn")
 
 [node name="Label" type="Label" parent="." unique_id=549489903]
 layout_mode = 0
@@ -26,7 +29,7 @@ offset_bottom = 303.0
 theme_override_font_sizes/font_size = 40
 text = "RESUME"
 
-[node name="ResumeButn2" type="Button" parent="." unique_id=1159998873]
+[node name="OptionsButn" type="Button" parent="." unique_id=1159998873]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 327.0
@@ -35,7 +38,7 @@ offset_bottom = 423.0
 theme_override_font_sizes/font_size = 40
 text = "OPTIONS"
 
-[node name="ResumeButn3" type="Button" parent="." unique_id=639759065]
+[node name="QuitBtn" type="Button" parent="." unique_id=639759065]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 454.0
@@ -43,3 +46,5 @@ offset_right = 483.0
 offset_bottom = 550.0
 theme_override_font_sizes/font_size = 40
 text = "QUIT"
+
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]

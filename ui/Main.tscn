@@ -89,6 +89,15 @@ corner_radius_bottom_left = 12
 streams_count = 1
 stream_0/stream = ExtResource("1_32dmw")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_asnk4"]
+bg_color = Color(0.33428285, 0.66160697, 0.6723795, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n3hyh"]
+bg_color = Color(0.32654798, 0.6747941, 0.58160996, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_82cwr"]
+bg_color = Color(0.5574654, 0.14633647, 0.29129052, 1)
+
 [node name="Control" type="Control" unique_id=529048760]
 layout_mode = 3
 anchors_preset = 15
@@ -167,9 +176,9 @@ autoplay = true
 
 [node name="OptionsPanel" type="Panel" parent="." unique_id=766041407]
 layout_mode = 0
-offset_left = 583.0
+offset_left = 390.0
 offset_top = 137.0
-offset_right = 1113.0
+offset_right = 920.0
 offset_bottom = 579.0
 
 [node name="CloseOptionsBtn" type="Button" parent="OptionsPanel" unique_id=84956293]
@@ -181,8 +190,49 @@ offset_bottom = 65.0
 text = "CLOSE
 "
 
+[node name="Audio Slider" type="HSlider" parent="OptionsPanel" unique_id=2119213806]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 126.0
+offset_right = 494.0
+offset_bottom = 191.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_asnk4")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_n3hyh")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_82cwr")
+
+[node name="Label" type="Label" parent="OptionsPanel" unique_id=1634395130]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 94.0
+offset_right = 125.0
+offset_bottom = 139.0
+theme_override_font_sizes/font_size = 32
+text = "Audio"
+
+[node name="Label2" type="Label" parent="OptionsPanel" unique_id=18425401]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 191.0
+offset_right = 245.0
+offset_bottom = 236.0
+theme_override_font_sizes/font_size = 32
+text = "Sound Effects"
+
+[node name="SFX Slider" type="HSlider" parent="OptionsPanel" unique_id=82028256]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 231.0
+offset_right = 494.0
+offset_bottom = 296.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_asnk4")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_n3hyh")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_82cwr")
+
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="VBoxContainer" method="_on_load_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="VBoxContainer" method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="VBoxContainer" method="_on_exit_pressed"]
+[connection signal="pressed" from="OptionsPanel/CloseOptionsBtn" to="VBoxContainer" method="_on_close_options_btn_pressed"]
+[connection signal="value_changed" from="OptionsPanel/Audio Slider" to="VBoxContainer" method="_on_audio_slider_value_changed"]
+[connection signal="value_changed" from="OptionsPanel/SFX Slider" to="VBoxContainer" method="_on_sfx_slider_value_changed"]

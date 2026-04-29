@@ -1,6 +1,10 @@
 extends VBoxContainer
+
 @onready var mainMenu = $"."
 @onready var options = $"../OptionsPanel"
+
+var audio_bus_id = AudioServer.get_bus_index("Audio")
+var sfx_bus_id = AudioServer.get_bus_index("SFX")
 
 func _ready()-> void:
 	mainMenu.show()
@@ -21,3 +25,22 @@ func _on_options_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+
+
+
+
+func _on_close_options_btn_pressed() -> void:
+	mainMenu.visible = true
+	options.visible = false
+	
+
+
+func _on_audio_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(audio_bus_id, linear_to_db(value))
+	
+
+
+
+func _on_sfx_slider_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(sfx_bus_id, linear_to_db(value))
