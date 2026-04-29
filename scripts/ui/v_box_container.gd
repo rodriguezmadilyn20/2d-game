@@ -2,7 +2,7 @@ extends VBoxContainer
 
 
 func _on_start_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/Scene1.tscn")
 
 
 func _on_load_pressed() -> void:
@@ -14,4 +14,4 @@ func _on_options_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().quit()

@@ -163,6 +163,7 @@ text = "QUIT"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=195653617]
 stream = SubResource("AudioStreamRandomizer_3ydky")
 volume_db = 1.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
