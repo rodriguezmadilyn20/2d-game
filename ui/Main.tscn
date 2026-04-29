@@ -7,6 +7,13 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1l72"]
+bg_color = Color(0.5764706, 0.56078434, 0.8509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2vec"]
 bg_color = Color(0.98597115, 0.8163442, 0.9199097, 1)
 corner_radius_top_left = 12
@@ -22,6 +29,13 @@ corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 corner_detail = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vds1r"]
+bg_color = Color(0.5764706, 0.56078434, 0.8509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sx1v2"]
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -35,6 +49,13 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i1r05"]
+bg_color = Color(0.5764706, 0.56078434, 0.8509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enpfv"]
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -43,6 +64,13 @@ corner_radius_bottom_left = 12
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r4ypb"]
 bg_color = Color(0.8352941, 0.45882353, 0.08627451, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bydl8"]
+bg_color = Color(0.5775011, 0.5612006, 0.8498316, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -70,6 +98,15 @@ offset_right = 1141.0
 offset_bottom = 637.0
 text = "VERSION 1.0.0 - G5 Gaming and BlueHeart Interactive Studios"
 
+[node name="Label2" type="Label" parent="." unique_id=876565388]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 49.0
+offset_right = 681.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 64
+text = "Project G5 Platform"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1835213942]
 layout_mode = 1
 anchors_preset = 15
@@ -85,6 +122,7 @@ theme_override_constants/separation = 15
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_wa6so")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_y1l72")
 theme_override_styles/hover = SubResource("StyleBoxFlat_t2vec")
 text = "START"
 
@@ -92,6 +130,7 @@ text = "START"
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_32dmw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vds1r")
 theme_override_styles/hover = SubResource("StyleBoxFlat_sx1v2")
 text = "LOAD"
 
@@ -99,6 +138,7 @@ text = "LOAD"
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_3ydky")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i1r05")
 theme_override_styles/hover = SubResource("StyleBoxFlat_enpfv")
 text = "OPTIONS"
 
@@ -106,5 +146,6 @@ text = "OPTIONS"
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_r4ypb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bydl8")
 theme_override_styles/hover = SubResource("StyleBoxFlat_d1rkh")
 text = "QUIT"
