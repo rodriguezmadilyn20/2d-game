@@ -241,6 +241,39 @@ offset_right = 665.0
 offset_bottom = 155.0
 bus_name = "Master"
 
+[node name="Button" type="Button" parent="OptionsPanel" unique_id=980026100]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 383.0
+offset_right = 197.0
+offset_bottom = 431.0
+text = "KEYBOARD AND
+MOUSE"
+
+[node name="Button2" type="Button" parent="OptionsPanel" unique_id=653060145]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 383.0
+offset_right = 349.0
+offset_bottom = 439.0
+text = "GAMEPAD"
+
+[node name="Button3" type="Button" parent="OptionsPanel" unique_id=803113352]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 383.0
+offset_right = 501.0
+offset_bottom = 439.0
+text = "TOUCH"
+
+[node name="Button4" type="Button" parent="OptionsPanel" unique_id=856350853]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 383.0
+offset_right = 653.0
+offset_bottom = 439.0
+text = "AUTO-SWITCH"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer" method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Load" to="VBoxContainer" method="_on_load_pressed"]
